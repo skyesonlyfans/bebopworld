@@ -4,23 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
-    <title>Bepop's World Travel | Family Vacations</title>
-    
-    <!-- Professional Google Fonts (Expedia-style) -->
+    <title>Bebop World Travel | Family Vacations</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
     <style>
         :root {
-            /* Soft Blue & Oak Brown Theme */
-            --bg-body: #f0f4f8; /* Soft blue-grey */
-            --bg-surface: #ffffff; /* Clean white */
-            --text-main: #1e293b; /* Dark slate for high readability */
-            --text-muted: #64748b; /* Lighter slate for secondary text */
-            --accent-oak: #a67c52; /* Oak brown */
-            --accent-oak-hover: #8c6641; /* Darker oak */
-            --accent-blue: #0ea5e9; /* Soft highlight blue */
+            --bg-body: #f0f4f8;
+            --bg-surface: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --accent-oak: #a67c52;
+            --accent-oak-hover: #8c6641;
+            --accent-blue: #0ea5e9;
             --border-color: #e2e8f0;
             --radius-lg: 12px;
             --radius-sm: 6px;
@@ -28,13 +24,11 @@
             --shadow-md: 0 10px 25px rgba(0,0,0,0.08);
             --transition: all 0.3s ease;
         }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
         body {
             font-family: 'Roboto', sans-serif;
             background-color: var(--bg-body);
@@ -43,13 +37,10 @@
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
-
         h1, h2, h3, h4, .logo-text {
             font-family: 'Montserrat', sans-serif;
             color: var(--text-main);
         }
-
-        /* Header Navigation */
         header {
             background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -61,7 +52,6 @@
             border-bottom: 1px solid var(--border-color);
             box-shadow: var(--shadow-sm);
         }
-
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -70,33 +60,23 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .logo {
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: var(--text-main);
             display: flex;
             align-items: center;
-            gap: 10px;
-            text-decoration: none;
             cursor: pointer;
-            letter-spacing: -0.5px;
         }
-
-        .logo svg {
-            fill: var(--accent-oak);
+        .logo img {
+            height: 50px;
+            object-fit: contain;
             transition: var(--transition);
         }
-
-        .logo:hover svg {
-            transform: scale(1.1);
+        .logo:hover img {
+            transform: scale(1.05);
         }
-
         nav {
             display: flex;
             gap: 2rem;
         }
-
         nav a {
             text-decoration: none;
             color: var(--text-muted);
@@ -107,7 +87,6 @@
             position: relative;
             padding: 0.5rem 0;
         }
-
         nav a::after {
             content: '';
             position: absolute;
@@ -119,30 +98,23 @@
             transition: width 0.3s ease;
             border-radius: 3px;
         }
-
         nav a:hover { color: var(--text-main); }
         nav a:hover::after, nav a.active::after { width: 100%; }
         nav a.active { color: var(--text-main); font-weight: 600; }
-
         main {
             min-height: calc(100vh - 100px);
             padding-top: 70px;
         }
-
         .view {
             display: none;
             opacity: 0;
             animation: fadeIn 0.4s ease-out forwards;
         }
-
         .view.active { display: block; }
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
-        /* Hero Section */
         .hero-banner {
             position: relative;
             height: 65vh;
@@ -155,7 +127,6 @@
             overflow: hidden;
             background-color: #1e293b;
         }
-
         .hero-bg {
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
@@ -163,23 +134,20 @@
             background-size: cover;
             background-position: center;
             z-index: 1;
-            opacity: 0.6; /* Softens image to make text pop */
+            opacity: 0.6;
         }
-
         .hero-overlay {
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             background: linear-gradient(to top, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.3));
             z-index: 2;
         }
-
         .hero-content {
             position: relative;
             max-width: 800px;
             color: #ffffff;
             z-index: 3;
         }
-
         .hero-content h1 {
             font-size: 3.5rem;
             font-weight: 800;
@@ -188,44 +156,36 @@
             color: #ffffff;
             text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
-
         .hero-content p {
             font-size: 1.2rem;
             font-weight: 400;
             color: #e2e8f0;
             margin-bottom: 2.5rem;
         }
-
         .content-section {
             max-width: 1200px;
             margin: 0 auto;
             padding: 4rem 2rem;
         }
-
         .section-header {
             text-align: center;
             margin-bottom: 3.5rem;
         }
-
         .section-header h2 {
             font-size: 2.2rem;
             color: var(--text-main);
             margin-bottom: 0.8rem;
             font-weight: 700;
         }
-        
         .section-header p {
             font-size: 1.1rem;
             color: var(--text-muted);
         }
-
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
-
-        /* Standardized Professional Cards */
         .card {
             background: var(--bg-surface);
             border: 1px solid var(--border-color);
@@ -236,13 +196,11 @@
             display: flex;
             flex-direction: column;
         }
-
         .card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-md);
             border-color: #cbd5e1;
         }
-
         .card-img-wrapper {
             position: relative;
             width: 100%;
@@ -250,40 +208,33 @@
             overflow: hidden;
             background-color: var(--border-color);
         }
-
         .card-img {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-
         .card:hover .card-img {
             transform: scale(1.03);
         }
-
         .card-content {
             padding: 1.8rem;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
         }
-
         .card-content h3 {
             font-size: 1.4rem;
             margin-bottom: 0.8rem;
             color: var(--text-main);
             font-weight: 700;
         }
-
         .card-content p {
             color: var(--text-muted);
             font-size: 1rem;
             margin-bottom: 1.5rem;
             flex-grow: 1;
         }
-
-        /* Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -299,31 +250,25 @@
             border: 2px solid transparent;
             text-align: center;
         }
-
         .btn-primary {
             background-color: var(--accent-oak);
             color: white;
             box-shadow: 0 2px 4px rgba(166, 124, 82, 0.3);
         }
-
         .btn-primary:hover {
             background-color: var(--accent-oak-hover);
             transform: translateY(-1px);
             box-shadow: 0 4px 8px rgba(166, 124, 82, 0.4);
         }
-
         .btn-outline {
             background-color: transparent;
             color: var(--accent-oak);
             border-color: var(--accent-oak);
         }
-
         .btn-outline:hover {
             background-color: var(--accent-oak);
             color: white;
         }
-
-        /* Contact & Forms */
         .contact-layout {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
@@ -332,20 +277,17 @@
             margin: 0 auto;
             padding: 2rem;
         }
-
         .contact-info h1 {
             font-size: 2.8rem;
             line-height: 1.2;
             margin-bottom: 1.2rem;
             color: var(--text-main);
         }
-
         .contact-info p {
             color: var(--text-muted);
             font-size: 1.1rem;
             margin-bottom: 1.5rem;
         }
-
         .form-container {
             background: var(--bg-surface);
             padding: 2.5rem;
@@ -353,11 +295,9 @@
             box-shadow: var(--shadow-md);
             border: 1px solid var(--border-color);
         }
-
         .form-group {
             margin-bottom: 1.2rem;
         }
-
         .form-group label {
             display: block;
             font-size: 0.9rem;
@@ -365,7 +305,6 @@
             color: var(--text-main);
             margin-bottom: 0.4rem;
         }
-
         .form-group input,
         .form-group textarea {
             width: 100%;
@@ -378,7 +317,6 @@
             transition: var(--transition);
             border-radius: var(--radius-sm);
         }
-
         .form-group input:focus, 
         .form-group textarea:focus {
             outline: none;
@@ -386,12 +324,10 @@
             background-color: #ffffff;
             box-shadow: 0 0 0 3px rgba(166, 124, 82, 0.1);
         }
-
         .form-group textarea {
             resize: vertical;
             min-height: 120px;
         }
-
         .form-status {
             margin-top: 1rem;
             padding: 1rem;
@@ -400,27 +336,22 @@
             font-weight: 500;
             border-radius: var(--radius-sm);
         }
-
         .form-status.success {
             display: block;
             background-color: #f0fdf4;
             color: #166534;
             border: 1px solid #bbf7d0;
         }
-
         .form-status.error {
             display: block;
             background-color: #fef2f2;
             color: #991b1b;
             border: 1px solid #fecaca;
         }
-
-        /* Accordion Structure for About/FAQ */
         .accordion-container {
             max-width: 900px;
             margin: 0 auto;
         }
-
         .accordion-item {
             background: var(--bg-surface);
             border: 1px solid var(--border-color);
@@ -430,11 +361,9 @@
             overflow: hidden;
             transition: var(--transition);
         }
-
         .accordion-item:hover {
             border-color: #cbd5e1;
         }
-
         .accordion-header {
             width: 100%;
             text-align: left;
@@ -451,18 +380,15 @@
             align-items: center;
             transition: var(--transition);
         }
-
         .accordion-header:hover {
             color: var(--accent-oak);
         }
-
         .accordion-icon {
             font-size: 1.5rem;
             color: var(--accent-oak);
             transition: transform 0.3s ease;
             font-weight: 300;
         }
-
         .accordion-content {
             max-height: 0;
             overflow: hidden;
@@ -470,19 +396,15 @@
             padding: 0 1.5rem;
             background: var(--bg-surface);
         }
-
         .accordion-content p, 
         .accordion-content ul {
             color: var(--text-muted);
             margin-bottom: 1.2rem;
             font-size: 1.05rem;
         }
-
         .accordion-content ul {
             padding-left: 1.5rem;
         }
-
-        /* Active Accordion States */
         .accordion-item.active .accordion-header {
             border-bottom: 1px solid var(--border-color);
             color: var(--accent-oak);
@@ -491,17 +413,15 @@
             transform: rotate(45deg);
         }
         .accordion-item.active .accordion-content {
-            max-height: 1000px; /* Arbitrary large number to allow opening */
+            max-height: 1000px;
             padding: 1.5rem;
         }
-
         footer {
             background-color: var(--text-main);
             color: #94a3b8;
             padding: 3rem 2rem;
             text-align: center;
         }
-
         .footer-logo {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
@@ -509,18 +429,15 @@
             margin-bottom: 0.5rem;
             font-weight: 700;
         }
-
-        /* Responsive Design */
         @media (max-width: 900px) {
             .contact-layout { grid-template-columns: 1fr; gap: 2rem; }
             .hero-content h1 { font-size: 2.8rem; }
         }
-
         @media (max-width: 640px) {
             .nav-container { padding: 1rem; flex-direction: column; gap: 1rem; }
             nav { width: 100%; justify-content: center; gap: 1.5rem; }
             nav a { font-size: 0.95rem; }
-            main { padding-top: 100px; } /* Adjust for taller mobile header */
+            main { padding-top: 100px; }
             .hero-content h1 { font-size: 2.2rem; }
             .hero-banner { min-height: 400px; padding: 0 1.5rem; }
             .content-section { padding: 3rem 1.5rem; }
@@ -536,13 +453,11 @@
     <header>
         <div class="nav-container">
             <a class="logo" onclick="switchView('home')">
-                <svg width="26" height="26" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                </svg>
-                <span class="logo-text">Bepop's World Travel</span>
+                <img src="Untitled design.png" alt="Bebop World Travel Logo">
             </a>
             <nav>
                 <a id="nav-home" class="active" onclick="switchView('home')">Destinations</a>
+                <a id="nav-promotions" onclick="switchView('promotions')">Promotions</a>
                 <a id="nav-about" onclick="switchView('about')">About & FAQ</a>
                 <a id="nav-contact" onclick="switchView('contact')">Contact Us</a>
             </nav>
@@ -550,7 +465,6 @@
     </header>
 
     <main>
-        <!-- HOME VIEW -->
         <section id="view-home" class="view active">
             <div class="hero-banner">
                 <div class="hero-bg"></div>
@@ -569,7 +483,6 @@
                 </div>
 
                 <div class="grid">
-                    <!-- Disney Cruises -->
                     <div class="card">
                         <div class="card-img-wrapper">
                             <img src="https://cdn.pixabay.com/photo/2017/08/17/20/00/disney-2652662_1280.jpg" alt="Beautiful cruise ship stateroom suite" class="card-img">
@@ -581,7 +494,6 @@
                         </div>
                     </div>
 
-                    <!-- Royal Caribbean -->
                     <div class="card">
                         <div class="card-img-wrapper">
                             <img src="https://cdn.pixabay.com/photo/2014/10/23/21/53/cruise-ship-500398_1280.jpg" alt="Cruise ship top deck and pool" class="card-img">
@@ -593,7 +505,6 @@
                         </div>
                     </div>
 
-                    <!-- Princess Cruises -->
                     <div class="card">
                         <div class="card-img-wrapper">
                             <img src="https://cdn.pixabay.com/photo/2022/03/07/23/13/regal-princess-7054704_1280.jpg" alt="Cruise ship sailing over beautiful ocean" class="card-img">
@@ -608,7 +519,41 @@
             </div>
         </section>
 
-        <!-- ABOUT & FAQ VIEW -->
+        <section id="view-promotions" class="view">
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Current Promotions</h2>
+                    <p>Take advantage of these exclusive limited-time offers for your next getaway.</p>
+                </div>
+                
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Oceania Cruises Exclusive Offer</h3>
+                            <p>Receive up to $1,000 in Shipboard Credit per stateroom. This incredible deal always includes specialty dining, shipboard gratuities, unlimited WiFi, and your choice of wine & beer by the glass or a shore excursions credit. Valid on sailings through April 2028. Book by July 10, 2026.</p>
+                            <a href="https://github.com/skyesonlyfans/bebopworld/blob/main/promotions/Oceania-June-Exclusive-Offer-Flyer.pdf" target="_blank" class="btn btn-outline" style="width: 100%; margin-top: auto;">View Oceania Flyer</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Norwegian Cruise Line: Free at Sea</h3>
+                            <p>Enjoy over $2,000 in value with NCL's Free at Sea program. This includes an unlimited open bar, specialty dining, excursion credits, and unlimited WiFi. Looking for more? Upgrade to Free at Sea Plus for top-shelf spirits, Starbucks, and more!</p>
+                            <a href="https://github.com/skyesonlyfans/bebopworld/blob/main/promotions/Free-At-Sea%E2%84%A2-Free-At-Sea-Plus%E2%84%A2-Booklet_2026-04-02_17-00-12.pdf" target="_blank" class="btn btn-outline" style="width: 100%; margin-top: auto;">View NCL Booklet</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Virgin Voyages: Free Balconies</h3>
+                            <p>Portholes out, views in! Step up to a Sea Terrace for free and get 70% off your second Sailor. Wake up to open-air ocean views on your next kid-free voyage. This promotion runs from May 29 through July 31, 2026.</p>
+                            <a href="https://github.com/skyesonlyfans/bebopworld/blob/main/promotions/US-Sailor-June-July-Core-Offer-Flyer-002%20(1).pdf" target="_blank" class="btn btn-outline" style="width: 100%; margin-top: auto;">View Virgin Flyer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="view-about" class="view">
             <div class="content-section">
                 <div class="section-header">
@@ -618,18 +563,16 @@
 
                 <div class="accordion-container">
                     
-                    <!-- Accordion Item 1 -->
                     <div class="accordion-item">
                         <button class="accordion-header">
                             Our Mission Statement
                             <span class="accordion-icon">+</span>
                         </button>
                         <div class="accordion-content">
-                            <p>At Bepop's World Travel, our mission is to help families create lifelong memories by taking the stress out of vacation planning. We believe that family time is precious so we handle the logistical details so you can focus entirely on the fun.</p>
+                            <p>At Bebop World Travel, our mission is to help families create lifelong memories by taking the stress out of vacation planning. We believe that family time is precious so we handle the logistical details so you can focus entirely on the fun.</p>
                         </div>
                     </div>
 
-                    <!-- Accordion Item 2 -->
                     <div class="accordion-item">
                         <button class="accordion-header">
                             Travel Documents & Client Responsibility
@@ -646,7 +589,6 @@
                         </div>
                     </div>
 
-                    <!-- Accordion Item 3 -->
                     <div class="accordion-item">
                         <button class="accordion-header">
                             FAQ: Do I pay extra to use a travel agent?
@@ -657,7 +599,6 @@
                         </div>
                     </div>
 
-                    <!-- Accordion Item 4 -->
                     <div class="accordion-item">
                         <button class="accordion-header">
                             FAQ: Which cruise line is best for my family?
@@ -668,7 +609,6 @@
                         </div>
                     </div>
 
-                    <!-- Accordion Item 5 -->
                     <div class="accordion-item">
                         <button class="accordion-header">
                             FAQ: Can you help with flights and hotels?
@@ -683,7 +623,6 @@
             </div>
         </section>
 
-        <!-- CONTACT VIEW -->
         <section id="view-contact" class="view">
             <div class="contact-layout content-section">
                 <div class="contact-info">
@@ -724,12 +663,11 @@
     </main>
 
     <footer>
-        <div class="footer-logo">Bepop's World Travel</div>
-        <p>&copy; 2026 Bepop's World Travel. Making family vacations simple.</p>
+        <div class="footer-logo">Bebop World Travel</div>
+        <p>&copy; 2026 Bebop World Travel. Making family vacations simple.</p>
     </footer>
 
     <script>
-        // --- 1. Single Page Application (SPA) Routing ---
         function switchView(viewName) {
             document.querySelectorAll('.view').forEach(view => {
                 view.classList.remove('active');
@@ -749,24 +687,13 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // --- 2. Accordion Logic for About/FAQ ---
         const accordionHeaders = document.querySelectorAll('.accordion-header');
         
         accordionHeaders.forEach(header => {
             header.addEventListener('click', function() {
-                // Get the parent item
                 const item = this.parentElement;
-                
-                // Check if it's already active
                 const isActive = item.classList.contains('active');
                 
-                // Optional: Close all other open accordions (uncomment below if desired)
-                /* document.querySelectorAll('.accordion-item').forEach(otherItem => {
-                    otherItem.classList.remove('active');
-                }); 
-                */
-
-                // Toggle the clicked one
                 if (!isActive) {
                     item.classList.add('active');
                 } else {
@@ -775,7 +702,6 @@
             });
         });
 
-        // --- 3. Form Submission (Web3Forms AJAX) ---
         const contactForm = document.getElementById('travel-contact-form');
         const statusMsg = document.getElementById('form-status-message');
 
